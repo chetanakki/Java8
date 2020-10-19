@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 class MyClass
 {
@@ -83,6 +84,19 @@ public class Main {
         //Nashorn JavaScript Engine
 
        // Base64 Encode Decode
+        
+        // Stream API
+        
+    	List<String> list = new ArrayList<String>();  
+    	list.add("Maths");  
+    	list.add("English");  
+    	list.add("French");  
+        list.add("Sanskrit");
+        list.add("Abacus");
+        System.out.println("Size is : "+list.stream().count());
+        
+        List newList = list.stream().filter( element -> element.length() < 6).collect(Collectors.toList());
+        System.out.println("Filtered list: "+newList);
 	}
 
 }
