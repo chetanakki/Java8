@@ -3,6 +3,7 @@ package com.util.java8;
 @FunctionalInterface
 public interface MyFirstFunctionalInterface {
 	
+	// only one abstract method allowed
 	int add(int x, int y);
 	
 	default void secondMethod()
